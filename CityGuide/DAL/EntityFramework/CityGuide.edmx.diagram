@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="387e2a94ebf94da792a29bcb96a668aa" Name="Diagram1">
+        <EntityTypeShape EntityType="CityGuideModel.CommentFeedback" Width="1.5" PointX="7.5" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="CityGuideModel.Feedback" Width="1.5" PointX="5.25" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CityGuideModel.GeneralServiceHour" Width="1.5" PointX="5.25" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CityGuideModel.Location" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CityGuideModel.OccationalServiceHour" Width="1.5" PointX="5.25" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CityGuideModel.ServiceCategory" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CityGuideModel.Service" Width="1.5" PointX="3" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CityGuideModel.User" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <AssociationConnector Association="CityGuideModel.FK_CommentFeedback_Feedback" ManuallyRouted="false" />
+        <AssociationConnector Association="CityGuideModel.FK_CommentFeedback_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="CityGuideModel.FK_Feedback_Services" ManuallyRouted="false" />
+        <AssociationConnector Association="CityGuideModel.FK_Feedback_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="CityGuideModel.FK_GeneralServiceHour_Services" ManuallyRouted="false" />
+        <AssociationConnector Association="CityGuideModel.FK_Services_Location_City" ManuallyRouted="false" />
+        <AssociationConnector Association="CityGuideModel.FK_Services_Location_District" ManuallyRouted="false" />
+        <AssociationConnector Association="CityGuideModel.FK_Services_Location_State" ManuallyRouted="false" />
+        <AssociationConnector Association="CityGuideModel.FK_OccationalServiceHour_Services" ManuallyRouted="false" />
+        <AssociationConnector Association="CityGuideModel.FK_Services_ServiceCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="CityGuideModel.FK_Services_Users" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
