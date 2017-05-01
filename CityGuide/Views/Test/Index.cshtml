@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link href="~/css/CityGuideIndex.css" rel="stylesheet" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_-W8G4xFm9icMDLK8Nzd64-5dBYDK2E0&libraries=places"></script>
+<div ng-app="myApp" ng-controller="searchController">
+    <form ng-submit="search()"class="col-md-12 divSearch">
+        <input type="text" id="tbSearch" placeholder="I am looking for..." ng-model="searchKeyword"/>
+        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+    </form>
+    <div class="row" id="divResult">
+        <div class="col-md-4" ng-repeat="result in results">
+            <div class="result-panel">
+                <div class="result-image" ng-style="{'background-image': 'url({{result.photos[0].getUrl({ 'maxWidth': 400, 'maxHeight': 400 })}}), linear-gradient(to bottom,#ccc 8%,black 100%)'}">
+                    @*<img src="https://lh4.googleusercontent.com/-zpmvcsY5C7Y/V_2P5FbiI2I/AAAAAAAAKdg/dkYv1dwZJ5Q74TcaG9Dhj4IHpcG16TFAgCJkC/w500-h500-k/">*@
+                    @*<img ng-src="{{ result.photos[0].getUrl({ 'maxWidth': 400, 'maxHeight': 400 })}}">*@
+                </div>
+                <div class="result-image-overlay">
+                    <span class="opening-status">open</span>
+                    <span class="bookmark"><i class="fa fa-bookmark" aria-hidden="true"></i></span>
+                    <span class="title">{{result.name}}</span>
+                    <span class="formatted-address">{{result.formatted_address}}</span>
+                </div>
+                <div class="result-text">
+                    <span class="result-rating"><i class="fa fa-star" aria-hidden="true"></i>{{result.rating}}</span>
+                    <span class="result-icon">
+                        <img ng-src="{{result.icon}}" />
+                        <span class="result-types">{{result.types.join()}}</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div ng-repeat="test in records">{{test}}</div>
+        <div ng-repeat="test in results">{{test.name}}</div>
+    </div>
+    <div class="row" id="divNoResultFound"></div>
+    <div id="map"></div>
+</div>
+
+@Scripts.Render("~/bundles/test");
+

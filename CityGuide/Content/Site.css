@@ -1,12 +1,33 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color: #fefefe;
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+     margin-top: 15px;
+    background: #fafafa;
+    padding: 30px 5%;
+    -webkit-box-shadow: #aaa 0px 5px 25px;
+    -ms-box-shadow: #aaa 0px 5px 25px;
+    box-shadow: #aaa 0px 5px 25px;
+}
+
+/*Changing the default color of the placeholder*/
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #ddd;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: #ddd;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: #ddd;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #ddd;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -17,8 +38,26 @@
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
+
+.divSearch > input {
+   outline: none;
+    width: 80%;
+    font-size: 40px;
+    margin: auto;
+    display: block;
+    color: #333;
+    padding-right: 10%;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    background-color: transparent;
+}
+.divSearch > button {
+    font-size: 39px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background: transparent;
+    border: none;
+    color: #555;
+    width: 17%;    
 }
